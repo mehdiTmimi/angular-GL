@@ -1,0 +1,7 @@
+<form [formGroup]="f" (ngSubmit)="onAdd()">
+    <input type="number" formControlName="id" placeholder="id" >
+    <input type="text" formControlName="nom" placeholder="nom" >
+    <input type="text" formControlName="age" placeholder="age" >
+    <button (click)="onReset()" type="reset">clear</button>
+    <button [disabled]="!f.valid" type="submit">add</button>
+</form>
